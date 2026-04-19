@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    float num[50], divisor;
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    // Input array elements
+    printf("Enter %d elements:\n", n);
+    for(i = 0; i < n; i++) {
+        scanf("%f", &num[i]);
+    }
+
+    // Input divisor
+    printf("Enter divisor: ");
+    scanf("%f", &divisor);
+
+    // Check division by zero
+    if(divisor == 0) {
+        printf("Error! Division by zero is not allowed.\n");
+        return 0;
+    }
+
+    // Perform division
+    printf("Result after division:\n");
+    for(i = 0; i < n; i++) {
+        printf("%.2f / %.2f = %.2f\n", num[i], divisor, num[i] / divisor);
+    }
+
+    return 0;
+}
